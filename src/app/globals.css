@@ -2,20 +2,46 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: hsl(var(--primary));
 }
 
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: 0 0% 100%; /* blanco */
+    --foreground: 240 10% 3.9%; /* oscuro */
+    --card: 0 0% 100%; /* blanco */
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%; /* blanco */
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 156 100% 15%; /* verde oscuro #004a2c */
+    --primary-foreground: 0 0% 98%; /* blanco */
+    --secondary: 79 46% 55%; /* verde #9dbe59 */
+    --secondary-foreground: 240 10% 3.9%; /* oscuro */
+    --muted: 79 46% 55%; /* verde #9dbe59 */
+    --muted-foreground: 240 3.8% 46.1%; /* gris intermedio */
+    --accent: 79 46% 55%; /* verde #9dbe59 */
+    --accent-foreground: 240 5.9% 10%; /* oscuro */
+    --destructive: 0 84.2% 60.2%; /* rojo */
+    --destructive-foreground: 0 0% 98%; /* blanco */
+    --border: 92 25% 80%; /* borde en verde claro */
+    --input: 92 25% 80%; /* verde claro */
+    --ring: 240 10% 3.9%; /* oscuro */
+    --chart-1: 30 76% 61%; /* naranja */
+    --chart-2: 160 60% 45%; /* verde oscuro */
+    --chart-3: 220 37% 24%; /* azul oscuro */
+    --chart-4: 43 74% 66%; /* amarillo */
+    --chart-5: 27 87% 67%; /* dorado */
+    --radius: 0.5rem;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
 }

@@ -49,7 +49,7 @@ export function NavigationMenuDemo() {
       <Button variant="ghost">Inicio</Button>
       <HoverCard openDelay={0} closeDelay={0}>
         <HoverCardTrigger asChild>
-          <Button variant="ghost">Productos</Button>
+          <Button variant="ghost">Categorias</Button>
         </HoverCardTrigger>
         <HoverCardContent className="md:w-[400px] lg:w-[500px]">
           <ul className="grid gap-3 grid-cols-3 p-4">
@@ -124,7 +124,7 @@ export function Header() {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <header className="border-b h-[190px]">
+    <header className="h-[190px]">
       <div className="relative flex items-center justify-center">
         <img
           className={`h-9 relative bottom-[1px] w-full object-cover transition-all brightness-90 ${

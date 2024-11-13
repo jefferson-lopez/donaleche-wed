@@ -41,15 +41,15 @@ const FAVORITOS = donaleche_products.filter((product) =>
 export default function page() {
   return (
     <div className="w-full flex-col flex">
-      <div className="grid lg:grid-cols-3">
-        <div className="max-lg:hidden bg-secondary/30 flex items-end">
+      <div className="grid md:h-[calc(100dvh-190px)] lg:grid-cols-4">
+        <div className="max-lg:hidden col-span-1 bg-secondary flex items-end">
           <img src="/donaleche/doñalechebaca.png" alt="Doña Leche" />
         </div>
-        <div className="h-[400px] lg:h-[500px] max-lg:relative xl:h-full text-white bg-primary w-full">
+        <div className="max-md:h-[500px] col-span-2 max-lg:relative xl:h-full text-white bg-primary w-full">
           <div className="w-full relative z-10 flex items-center h-full gap-5 flex-col justify-center">
-            <div className="flex px-5 max-w-[500px] flex-col items-center">
+            <div className="flex py-5 px-5  max-w-[500px] flex-col items-center">
               <span className="uppercase font-light">Doña Leche</span>
-              <h1 className="text-4xl sm:text-5xl text-balance text-center font-semibold">
+              <h1 className="text-5xl sm:text-6xl tracking-tight text-balance text-center font-bold">
                 Tu pedido fresco, directo a casa.
               </h1>
               <span className="text-sm px-10 text-center">
@@ -77,7 +77,7 @@ export default function page() {
             />
           </div>
         </div>
-        <div className="flex max-lg:hidden flex-col bg-secondary">
+        <div className="flex col-span-1 max-lg:hidden flex-col bg-secondary">
           <img
             className="h-full object-cover"
             src="/donaleche/doñaleche-comida.svg"
@@ -90,7 +90,7 @@ export default function page() {
         </div>
       </div>
       <div className="flex px-10 flex-col items-center gap-10 justify-center py-20 w-full">
-        <h2 className="text-2xl font-semibold md:text-3xl text-center">
+        <h2 className="text-3xl font-bold md:text-4xl text-center">
           Categorias
         </h2>
         <div className="grid max-w-[700px] grid-cols-3 gap-5 md:gap-10">
@@ -108,7 +108,7 @@ export default function page() {
         </div>
       </div>
       <div className="flex bg-primary px-10 flex-col items-center gap-10 justify-center py-20 w-full">
-        <h2 className="text-2xl text-white font-semibold md:text-3xl text-center">
+        <h2 className="text-3xl font-bold md:text-4xl text-center text-white">
           Los Favoritos
         </h2>
         <div className="grid grid-cols-4 gap-5">
@@ -152,7 +152,7 @@ export default function page() {
         </div>
         <div className="flex relative z-10 flex-col justify-center items-center text-center h-full gap-3 md:gap-5">
           <div>
-            <h2 className="text-xl font-semibold md:text-3xl">
+            <h2 className="text-3xl font-bold text-balance md:text-4xl text-center">
               5% OFF En Tu Primera Compra
             </h2>
             <p className="text-center text-sm md:text-base">
@@ -173,7 +173,7 @@ export default function page() {
         />
         <div className="flex relative z-10 flex-col items-center gap-5 justify-center">
           <div>
-            <h2 className="text-2xl font-semibold md:text-3xl text-center">
+            <h2 className="text-3xl font-bold md:text-4xl text-center">
               Aprender con nosotros
             </h2>
             <p className="text-center">Conoce todas la recetas de Doña Leche</p>
@@ -203,13 +203,12 @@ export default function page() {
         </div>
         <div className="flex relative z-10 flex-col items-center gap-5 justify-center">
           <div>
-            <h2 className="text-2xl font-semibold md:text-3xl text-center">
+            <h2 className="text-3xl font-bold md:text-4xl text-center">
               Descubre quienes somos
             </h2>
             <p className="text-center max-w-[500px] text-balance">
-              Empresa láctea en el corazón lechero de Ubaté, Cundinamarca, donde
-              tradición y tecnología sostenible se unen para ofrecerte tus
-              productos lácteos favoritos con calidad excepcional.
+              Lácteos de calidad excepcional, con tradición y tecnología
+              sostenible, desde el corazón de Ubaté.
             </p>
           </div>
           <Button size="lg" className="w-fit rounded-full">
@@ -218,42 +217,69 @@ export default function page() {
         </div>
       </div>
 
-      <div className="relative md:h-[200px]  px-10 bg-secondary grid gap-10 py-10 w-full">
-        <div className="flex relative z-10 flex-col justify-center items-center text-center h-full gap-3 md:gap-5">
-          <div>
-            <h2 className="text-xl font-semibold md:text-3xl">
-              Siguenos en nuestras Redes
-            </h2>
-            <p className="text-center text-sm md:text-base">
-              Aplica solo para domicilios en la zona norte de Bogotá
-            </p>
-          </div>
-          <div>
-            <div className="flex items-center gap-4">
-              <a
-                href="https://www.facebook.com/donalechebogota/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  className="fill-primary w-12"
-                  src="/donaleche/facebook.svg"
-                  alt="Facebook Doña Leche"
-                />
-              </a>
-              <a
-                href="https://www.instagram.com/donalechebogota/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  className="fill-primary w-10"
-                  src="/donaleche/instagram.svg"
-                  alt="Instagram Doña Leche"
-                />
-              </a>
+      <div className="md:px-10">
+        <div className="relative md:rounded-full px-10 bg-secondary grid gap-10 py-10 w-full">
+          <div className="flex relative z-10 flex-col justify-center items-center text-center h-full gap-3 md:gap-5">
+            <div>
+              <h2 className="text-3xl font-bold md:text-4xl text-center">
+                Siguenos en nuestras Redes
+              </h2>
+              <p className="text-center max-w-[500px] text-sm md:text-base">
+                Conéctate con nosotros en redes sociales para conocer nuestras
+                promociones y novedades en productos lácteos frescos.
+              </p>
+            </div>
+            <div>
+              <div className="flex items-center gap-4">
+                <a
+                  href="https://www.facebook.com/donalechebogota/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    className="fill-primary w-12"
+                    src="/donaleche/facebook.svg"
+                    alt="Facebook Doña Leche"
+                  />
+                </a>
+                <a
+                  href="https://www.instagram.com/donalechebogota/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    className="fill-primary w-10"
+                    src="/donaleche/instagram.svg"
+                    alt="Instagram Doña Leche"
+                  />
+                </a>
+              </div>
             </div>
           </div>
+        </div>
+      </div>
+
+      <div className="relative md:h-[300px] min-h-[500px] px-10 md:px-20 grid md:grid-cols-2 gap-10 py-10 pb-0 w-full">
+        <div className="w-full h-full max-md:row-start-2 flex items-end justify-center">
+          <img
+            className="w-[400px]"
+            src="/donaleche/doñaleche-mercado.png"
+            alt="Desc"
+          />
+        </div>
+        <div className="flex relative z-10 flex-col justify-center items-center text-center h-full gap-3 md:gap-5">
+          <div>
+            <h2 className="text-3xl font-bold md:text-4xl text-balance text-center">
+              Compra tu mercado lácteo con nosotros
+            </h2>
+            <p className="text-center text-balance text-sm md:text-base">
+              Haz tu pedido de productos lácteos frescos y recíbelos en la
+              comodidad de tu hogar en poco tiempo.
+            </p>
+          </div>
+          <Button size="lg" className="w-fit rounded-full">
+            Pide Tu Domicilio
+          </Button>
         </div>
       </div>
     </div>

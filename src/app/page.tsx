@@ -43,7 +43,7 @@ const FAVORITOS = donaleche_products.filter((product) =>
 export default function page() {
   return (
     <div className="w-full flex-col flex">
-      <div className="grid md:h-[calc(100dvh-190px)] lg:grid-cols-4">
+      <div className="grid md:h-[calc(100dvh-174px)] lg:grid-cols-4">
         <div className="max-lg:hidden col-span-1 bg-secondary flex items-end">
           <img src="/donaleche/doñalechebaca.png" alt="Doña Leche" />
         </div>
@@ -191,7 +191,7 @@ export default function page() {
               </div>
             )).reverse()}
             <div className="p-5 md:hidden"></div>
-            <ScrollBar orientation="horizontal" />
+            <ScrollBar className="h-0" orientation="horizontal" />
           </div>
         </ScrollArea>
         <Button variant="link" className="text-white">

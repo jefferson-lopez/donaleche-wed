@@ -7,18 +7,9 @@ import {
   HoverCardTrigger,
 } from "@/components/ui/hover-card";
 import { cn } from "@/lib/utils";
-import {
-  Heart,
-  MapPin,
-  Menu,
-  Search,
-  ShoppingCart,
-  User,
-  X,
-} from "lucide-react";
+import { Heart, MapPin, Menu, Search, ShoppingCart, User } from "lucide-react";
 import Link from "next/link";
 import * as React from "react";
-import { useState } from "react";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 
@@ -124,26 +115,14 @@ export function NavigationMenuDemo() {
 }
 
 export function Header() {
-  const [isviewCaption, setIsviewCaption] = useState(true);
-
   return (
-    <header className="md:h-[190px]">
-      {isviewCaption && (
-        <div className="relative h-10 bg-secondary flex items-center justify-center">
-          <Button variant="link">
-            <MapPin className="w-4 h-4" />
-            Conoce nuestras ubicabiones
-          </Button>
-          <Button
-            className="absolute right-0 "
-            onClick={() => setIsviewCaption(false)}
-            size="icon"
-            variant="ghost"
-          >
-            <X />
-          </Button>
-        </div>
-      )}
+    <header className="md:h-[174px]">
+      <div className="relative h-10 bg-secondary flex items-center justify-center">
+        <Button variant="link">
+          <MapPin className="w-4 h-4" />
+          Conoce nuestras ubicabiones
+        </Button>
+      </div>
       <nav className="flex py-2 md:hidden justify-between items-center px-5 md:px-10">
         <div className="flex justify-end items-center gap-5">
           <Menu className="w-6 cursor-pointer h-6" />
@@ -180,7 +159,7 @@ export function Header() {
               placeholder="Buscar productos..."
               className="pr-10 rounded-full"
             />
-            <Search className="absolute w-5 h-5 right-4 top-1/2 transform -translate-y-1/2 text-gray-400" />
+            <Search className="absolute w-5 h-5 right-4 top-1/2 transform -translate-y-1/2 text-primary" />
           </div>
         </div>
 
@@ -211,7 +190,7 @@ export function Header() {
           </Button>
         </div>
       </nav>
-      <div className="p-4 max-md:hidden w-full flex justify-center">
+      <div className="p-4 py-0 max-md:hidden w-full flex justify-center">
         <NavigationMenuDemo />
       </div>
     </header>

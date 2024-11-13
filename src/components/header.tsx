@@ -7,7 +7,15 @@ import {
   HoverCardTrigger,
 } from "@/components/ui/hover-card";
 import { cn } from "@/lib/utils";
-import { Heart, Menu, Search, ShoppingCart, User } from "lucide-react";
+import {
+  Heart,
+  MapPin,
+  Menu,
+  Search,
+  ShoppingCart,
+  User,
+  X,
+} from "lucide-react";
 import Link from "next/link";
 import * as React from "react";
 import { useState } from "react";
@@ -115,56 +123,27 @@ export function NavigationMenuDemo() {
   );
 }
 
-const CAPTIONS = Array.from(
-  { length: 8 },
-  () => "Conoce nuestro punto de venta"
-);
-
 export function Header() {
-  const [isHovered, setIsHovered] = useState(false);
+  const [isviewCaption, setIsviewCaption] = useState(true);
 
   return (
     <header className="md:h-[190px]">
-      <div className="relative flex items-center justify-center">
-        <img
-          className={`h-9 relative bottom-[1px] w-full object-cover transition-all brightness-90 ${
-            isHovered ? "brightness-75" : ""
-          }`}
-          src="/donaleche/sidebar_Dona_Leche_2048x.webp"
-          alt="Sidebar Dona Leche"
-        />
-        <div className="absolute w-full text-lime-100">
-          <div className="overflow-hidden relative bottom-[1px] whitespace-nowrap">
-            <div
-              className="inline-flex font-medium text-sm tracking-wider animate-scroll"
-              style={{
-                animationPlayState: isHovered ? "paused" : "running",
-              }}
-              onMouseEnter={() => setIsHovered(true)}
-              onMouseLeave={() => setIsHovered(false)}
-            >
-              {CAPTIONS.map((text, index) => (
-                <Link
-                  href={"/"}
-                  key={index}
-                  className="mx-4 px-6 hover:text-lime-50 active:text-lime-50"
-                >
-                  {text}
-                </Link>
-              ))}
-              {CAPTIONS.map((text, index) => (
-                <Link
-                  href={"/"}
-                  key={`${index}-duplicate`}
-                  className="mx-4 px-6 hover:text-lime-50 active:text-lime-50"
-                >
-                  {text}
-                </Link>
-              ))}
-            </div>
-          </div>
+      {isviewCaption && (
+        <div className="relative h-10 bg-secondary flex items-center justify-center">
+          <Button variant="link">
+            <MapPin className="w-4 h-4" />
+            Conoce nuestras ubicabiones
+          </Button>
+          <Button
+            className="absolute right-0 "
+            onClick={() => setIsviewCaption(false)}
+            size="icon"
+            variant="ghost"
+          >
+            <X />
+          </Button>
         </div>
-      </div>
+      )}
       <nav className="flex py-2 md:hidden justify-between items-center px-5 md:px-10">
         <div className="flex justify-end items-center gap-5">
           <Menu className="w-6 cursor-pointer h-6" />

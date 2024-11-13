@@ -7,7 +7,7 @@ import {
   HoverCardTrigger,
 } from "@/components/ui/hover-card";
 import { cn } from "@/lib/utils";
-import { Heart, Search, ShoppingCart, User } from "lucide-react";
+import { Heart, Menu, Search, ShoppingCart, User } from "lucide-react";
 import Link from "next/link";
 import * as React from "react";
 import { useState } from "react";
@@ -124,7 +124,7 @@ export function Header() {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <header className="h-[190px]">
+    <header className="md:h-[190px]">
       <div className="relative flex items-center justify-center">
         <img
           className={`h-9 relative bottom-[1px] w-full object-cover transition-all brightness-90 ${
@@ -165,7 +165,10 @@ export function Header() {
           </div>
         </div>
       </div>
-      <nav className="h-[85px] grid p-4 grid-cols-3 gap-5 w-full">
+      <nav className="flex py-2 md:hidden justify-between items-center px-5 md:px-10">
+        <div className="flex justify-end items-center gap-5">
+          <Menu className="w-6 cursor-pointer h-6" />
+        </div>
         <div className="flex items-center gap-5">
           <Link className="w-24" href={"/"}>
             <img
@@ -176,7 +179,33 @@ export function Header() {
             />
           </Link>
         </div>
-        <div className="flex items-center justify-between w-full">
+        <div className="flex justify-end items-center gap-5">
+          <Button size="icon" className="h-10 rounded-full w-10">
+            <ShoppingCart className="w-4 h-4" />
+          </Button>
+        </div>
+      </nav>
+      <nav className="h-[85px] max-md:hidden grid p-4 max-lg:grid-cols-2 grid-cols-3 xl:grid-cols-4 gap-5 w-full">
+        <div className="flex items-center xl:col-span-1 gap-5">
+          <Link className="w-24" href={"/"}>
+            <img
+              className="min-w-24"
+              src="/donaleche/Logo_Dona_Leche.webp"
+              alt="Logo Doña Leche"
+              title="Doña Leche"
+            />
+          </Link>
+          <div className="relative lg:hidden w-full">
+            <Input
+              type="text"
+              placeholder="Buscar productos..."
+              className="pr-10 rounded-full"
+            />
+            <Search className="absolute w-5 h-5 right-4 top-1/2 transform -translate-y-1/2 text-gray-400" />
+          </div>
+        </div>
+
+        <div className="flex max-lg:hidden items-center xl:col-span-2 justify-between w-full">
           <div className="relative w-full">
             <Input
               type="text"
@@ -186,21 +215,24 @@ export function Header() {
             <Search className="absolute w-5 h-5 right-4 top-1/2 transform -translate-y-1/2 text-gray-400" />
           </div>
         </div>
-        <div className="flex justify-end items-center gap-5">
-          <Button className="h-10 rounded-full" variant="outline">
-            <Heart className="w-4 h-4" />
-            Mi Lista
-          </Button>
-          <Button className="h-10 rounded-full" variant="outline">
-            <User className="w-4 h-4" />
-            Registrate
-          </Button>
+
+        <div className="flex justify-end xl:col-span-1 items-center gap-5">
+          <div className="flex items-center">
+            <Button className="h-10 rounded-full" variant="link">
+              <Heart className="w-4 h-4" />
+              Mi Lista
+            </Button>
+            <Button className="h-10 rounded-full" variant="link">
+              <User className="w-4 h-4" />
+              Registrate
+            </Button>
+          </div>
           <Button size="icon" className="h-10 rounded-full w-10">
             <ShoppingCart className="w-4 h-4" />
           </Button>
         </div>
       </nav>
-      <div className="p-4 w-full flex justify-center">
+      <div className="p-4 max-md:hidden w-full flex justify-center">
         <NavigationMenuDemo />
       </div>
     </header>

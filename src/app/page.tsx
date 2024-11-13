@@ -2,6 +2,7 @@
 import { Button } from "@/components/ui/button";
 import HeroVideoDialog from "@/components/ui/hero-video-dialog";
 import donaleche_products from "@/data/donaleche_products.json";
+import { ArrowUpRight, Heart, ShoppingCart } from "lucide-react";
 
 const CATEGORIAS = [
   {
@@ -107,39 +108,82 @@ export default function page() {
           })}
         </div>
       </div>
-      <div className="flex bg-primary px-10 flex-col items-center gap-10 justify-center py-20 w-full">
-        <h2 className="text-3xl font-bold md:text-4xl text-center text-white">
+
+      <div className="flex bg-primary flex-col items-center gap-10 justify-center py-20 w-full">
+        <h2 className="text-3xl px-10 font-bold md:text-4xl text-center text-white">
           Los Favoritos
         </h2>
-        <div className="grid grid-cols-4 gap-5">
-          {FAVORITOS.map((product) => {
-            return (
+        <div className="w-full xl:px-10">
+          <div className="flex w-full max-xl:overflow-x-scroll justify-start xl:justify-center gap-5">
+            {FAVORITOS.map((product) => (
               <div
                 key={product.title}
-                className="flex flex-col bg-white aspect-square rounded-lg justify-center items-center gap-3 pb-5"
+                className="min-w-[300px] max-xl:first:ml-10 max-xl:last:mr-10 w-[300px] pt-4 relative bg-white flex flex-col items-center rounded-lg shadow-md overflow-hidden"
               >
+                <div className="absolute right-0 top-0 p-2">
+                  <Button size="icon" className="w-8 h-8" variant="ghost">
+                    <Heart />
+                  </Button>
+                </div>
                 <img
-                  className="w-32 h-32 rounded-md"
+                  className="w-[50%] h-auto rounded-t-lg"
                   src={product.image_url_1}
                   alt={product.title}
                 />
-                <div className="flex flex-col items-center justify-center gap-2">
-                  <span className="uppercase text-muted-foreground text-xs">
-                    {product.collection}
-                  </span>
-                  <p className="font-medium text-balance max-w-[180px] text-center">
-                    {product.title}
-                  </p>
-                  <div className="flex gap-1 items-center">
-                    <span className="text-muted-foreground">Desde</span>
-                    <strong>{product.price.replace("Desde", "")}</strong>
+                <div className="px-4 flex flex-col justify-between h-full w-full">
+                  <div>
+                    <h5 className="text-lg font-semibold tracking-tight text-gray-900 dark:text-white">
+                      {product.title}
+                    </h5>
+                    <div className="flex mt-2 mb-4 items-center">
+                      <div className="flex space-x-1 rtl:space-x-reverse">
+                        {[...Array(4)].map((_, index) => (
+                          <svg
+                            key={index}
+                            className="w-3 h-3 text-yellow-300"
+                            aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="currentColor"
+                            viewBox="0 0 22 20"
+                          >
+                            <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                          </svg>
+                        ))}
+                        <svg
+                          className="w-3 h-3 text-gray-200 dark:text-gray-600"
+                          aria-hidden="true"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="currentColor"
+                          viewBox="0 0 22 20"
+                        >
+                          <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                        </svg>
+                      </div>
+                      <span className="bg-green-100 text-green-800 text-xs font-semibold px-2 py-0.5 rounded dark:bg-green-200 ml-2">
+                        5.0
+                      </span>
+                    </div>
+                    <span className="text-2xl font-bold text-gray-900 dark:text-white">
+                      {product.price.replace("Desde", "")}
+                    </span>
+                  </div>
+                  <div className="mt-auto py-3">
+                    <Button
+                      variant="secondary"
+                      size="lg"
+                      className="w-full rounded-full"
+                    >
+                      Agregar <ShoppingCart className="ml-1" />
+                    </Button>
                   </div>
                 </div>
-                <Button>Agregar al carrito</Button>
               </div>
-            );
-          }).reverse()}
+            )).reverse()}
+          </div>
         </div>
+        <Button variant="link" className="text-white">
+          Ver todos los productos <ArrowUpRight />
+        </Button>
       </div>
 
       <div className="relative md:h-[300px] px-10 md:px-20 grid md:grid-cols-2 gap-10 py-10 pb-0 w-full">
@@ -259,7 +303,7 @@ export default function page() {
         </div>
       </div>
 
-      <div className="relative md:h-[300px] min-h-[500px] px-10 md:px-20 grid md:grid-cols-2 gap-10 py-10 pb-0 w-full">
+      <div className="relative min-h-[600px] md:min-h-[500px] px-10 md:px-20 grid md:grid-cols-2 gap-10 py-10 pb-0 w-full">
         <div className="w-full h-full max-md:row-start-2 flex items-end justify-center">
           <img
             className="w-[400px]"

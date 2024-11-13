@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import { Button } from "@/components/ui/button";
 import HeroVideoDialog from "@/components/ui/hero-video-dialog";
+import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 import donaleche_products from "@/data/donaleche_products.json";
 import { ArrowUpRight, Heart, ShoppingCart } from "lucide-react";
 
@@ -109,12 +110,22 @@ export default function page() {
         </div>
       </div>
 
+      <div className="flex px-10 flex-col bg-secondary/30 items-center gap-10 justify-center py-20 w-full">
+        <h2 className="text-3xl font-bold md:text-4xl text-center">
+          Certificados
+        </h2>
+        <img
+          src="/donaleche/Certificados_Dona_Leche.webp"
+          alt="Certificados_Dona_Leche"
+        />
+      </div>
+
       <div className="flex bg-primary flex-col items-center gap-10 justify-center py-20 w-full">
         <h2 className="text-3xl px-10 font-bold md:text-4xl text-center text-white">
           Los Favoritos
         </h2>
-        <div className="w-full xl:px-10">
-          <div className="flex w-full max-xl:overflow-x-scroll justify-start xl:justify-center gap-5">
+        <ScrollArea className="w-full xl:px-10">
+          <div className="flex w-full justify-start xl:justify-center gap-5">
             {FAVORITOS.map((product) => (
               <div
                 key={product.title}
@@ -179,8 +190,10 @@ export default function page() {
                 </div>
               </div>
             )).reverse()}
+            <div className="p-5 md:hidden"></div>
+            <ScrollBar orientation="horizontal" />
           </div>
-        </div>
+        </ScrollArea>
         <Button variant="link" className="text-white">
           Ver todos los productos <ArrowUpRight />
         </Button>
@@ -209,12 +222,7 @@ export default function page() {
         </div>
       </div>
 
-      <div className="relative px-10 grid md:grid-cols-2 items-center gap-10 justify-center py-10 pb-32 overflow-hidden bg-secondary/30 w-full">
-        <img
-          className="absolute object-cover bottom-0 aspect-square"
-          src="/donaleche/Bg_decoracion_Dona_Leche_1920x.webp"
-          alt="Aprende con nosotros"
-        />
+      <div className="relative px-10 grid md:grid-cols-2 items-center gap-10 justify-center py-10 overflow-hidden bg-secondary/30 w-full">
         <div className="flex relative z-10 flex-col items-center gap-5 justify-center">
           <div>
             <h2 className="text-3xl font-bold md:text-4xl text-center">

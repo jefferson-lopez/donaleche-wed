@@ -165,7 +165,7 @@ export function Header() {
           </div>
         </div>
       </div>
-      <nav className="flex py-2 md:hidden justify-between items-center px-5 md:px-10">
+      <nav className="flex py-2 sticky top-0 md:hidden justify-between items-center px-5 md:px-10">
         <div className="flex justify-end items-center gap-5">
           <Menu className="w-6 cursor-pointer h-6" />
         </div>
@@ -185,7 +185,7 @@ export function Header() {
           </Button>
         </div>
       </nav>
-      <nav className="h-[85px] max-md:hidden grid p-4 max-lg:grid-cols-2 grid-cols-3 xl:grid-cols-4 gap-5 w-full">
+      <nav className="h-[85px] sticky top-0 max-md:hidden grid p-4 max-lg:grid-cols-2 grid-cols-3 xl:grid-cols-4 gap-5 w-full">
         <div className="flex items-center xl:col-span-1 gap-5">
           <Link className="w-24" href={"/"}>
             <img

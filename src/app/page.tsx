@@ -43,10 +43,7 @@ const FAVORITOS = donaleche_products.filter((product) =>
 export default function page() {
   return (
     <div className="w-full flex-col flex">
-      <div className="grid md:h-[calc(100dvh-174px)] lg:grid-cols-4">
-        <div className="max-lg:hidden col-span-1 bg-secondary flex items-end">
-          <img src="/donaleche/doñalechebaca.png" alt="Doña Leche" />
-        </div>
+      <div className="grid md:h-[calc(100dvh-174px)]">
         <div className="max-md:h-[500px] col-span-2 max-lg:relative xl:h-full text-white bg-primary w-full">
           <div className="w-full relative z-10 flex items-center h-full gap-5 flex-col justify-center">
             <div className="flex py-5 px-5  max-w-[500px] flex-col items-center">
@@ -71,23 +68,12 @@ export default function page() {
               </Button>
             </div>
           </div>
-          <div className="h-full absolute left-0 bottom-0 flex items-end justify-start w-full lg:hidden">
+          <div className="h-full absolute left-0 bottom-0 flex items-end justify-start w-full">
             <img
-              className="w-64 brightness-90 relative right-28"
+              className="w-64 lg:w-96 brightness-90 relative right-28 xl:-right-36"
               src="/donaleche/doñalechebaca.png"
               alt=""
             />
-          </div>
-        </div>
-        <div className="flex col-span-1 max-lg:hidden flex-col bg-secondary">
-          <img
-            className="h-full object-cover"
-            src="/donaleche/doñaleche-comida.svg"
-            alt=""
-          />
-          <div className="h-[140px] uppercase flex-col md:text-3xl font-extrabold text-primary bg-secondary flex justify-center px-5 pt-5 rounded-t-md relative bottom-2">
-            <span>Nuestros</span>
-            <span>Prodcutos</span>
           </div>
         </div>
       </div>

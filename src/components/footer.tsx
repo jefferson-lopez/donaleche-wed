@@ -21,7 +21,7 @@ export function Footer() {
                 Llámanos:{" "}
                 <Link
                   href="tel:+573216599870"
-                  className="text-green-700 hover:underline"
+                  className="text-primary hover:underline"
                 >
                   +57 321 659870
                 </Link>
@@ -30,7 +30,7 @@ export function Footer() {
                 PQRS:{" "}
                 <Link
                   href="mailto:servicioalcliente@donaleche.com"
-                  className="text-green-700 hover:underline"
+                  className="text-primary hover:underline"
                 >
                   servicioalcliente@donaleche.com
                 </Link>
@@ -38,7 +38,7 @@ export function Footer() {
               <p>
                 <Link
                   href="mailto:mercadeo@donaleche.com"
-                  className="text-green-700 hover:underline"
+                  className="text-primary hover:underline"
                 >
                   mercadeo@donaleche.com
                 </Link>
@@ -48,7 +48,7 @@ export function Footer() {
 
           {/* Locations Section */}
           <div>
-            <h3 className="mb-4 text-lg font-semibold text-green-800">
+            <h3 className="mb-4 text-lg font-semibold text-primary">
               NUESTRAS SEDES
             </h3>
             <ul className="space-y-2">
@@ -63,10 +63,7 @@ export function Footer() {
                 "Niza",
               ].map((location) => (
                 <li key={location}>
-                  <Link
-                    href="#"
-                    className="text-gray-600 hover:text-green-700 hover:underline"
-                  >
+                  <Link href="#" className="text-primary  hover:underline">
                     {location}
                   </Link>
                 </li>
@@ -76,23 +73,17 @@ export function Footer() {
 
           {/* Delivery Section */}
           <div>
-            <h3 className="mb-4 text-lg font-semibold text-green-800">
+            <h3 className="mb-4 text-lg font-semibold text-primary">
               PIDE TU DOMICILIO
             </h3>
             <ul className="space-y-2">
               <li>
-                <Link
-                  href="#"
-                  className="text-gray-600 hover:text-green-700 hover:underline"
-                >
+                <Link href="#" className="text-primary  hover:underline">
                   Conoce nuestra tienda
                 </Link>
               </li>
               <li>
-                <Link
-                  href="#"
-                  className="text-gray-600 hover:text-green-700 hover:underline"
-                >
+                <Link href="#" className="text-primary hover:underline">
                   Pide por WhatsApp
                 </Link>
               </li>
@@ -101,7 +92,7 @@ export function Footer() {
 
           {/* Legal Section */}
           <div>
-            <h3 className="mb-4 text-lg font-semibold text-green-800">
+            <h3 className="mb-4 text-lg font-semibold text-primary">
               APARTADO LEGAL
             </h3>
             <ul className="space-y-2">
@@ -112,10 +103,7 @@ export function Footer() {
                 "Términos y condiciones",
               ].map((item) => (
                 <li key={item}>
-                  <Link
-                    href="#"
-                    className="text-gray-600 hover:text-green-700 hover:underline"
-                  >
+                  <Link href="#" className="text-primary hover:underline">
                     {item}
                   </Link>
                 </li>
@@ -124,9 +112,9 @@ export function Footer() {
           </div>
         </div>
       </div>
-      <div className="mt-8 border-t border-green-800/10">
+      <div className="mt-8 border-t border-primary/10">
         <div className="container mx-auto">
-          <p className="py-4 text-sm text-gray-600">
+          <p className="py-4 text-sm text-primary">
             © {new Date().getFullYear()} Doña Leche | Desarrollado por 2OS
           </p>
         </div>

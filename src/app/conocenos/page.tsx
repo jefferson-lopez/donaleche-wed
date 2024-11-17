@@ -28,14 +28,14 @@ export default function PageConocenos() {
               <h2 className="text-3xl font-bold tracking-tighter">
                 Nuestra Historia
               </h2>
-              <p className="text-muted-foreground">
+              <p className="text-primary">
                 Fundamos la marca Doña Leche en 1990, cuando lanzamos nuestra
                 primera línea de leche pasteurizada, marcando el comienzo de
                 nuestro compromiso con la calidad e innovación. Un año después,
                 fuimos pioneros en el mercado colombiano al introducir la Leche
                 Larga Vida UHT.
               </p>
-              <p className="text-muted-foreground">
+              <p className="text-primary">
                 Desempeñamos un papel crucial en el fortalecimiento de la
                 economía de nuestro municipio, creando nuevas oportunidades de
                 empleo y desarrollo para la comunidad local.
@@ -62,31 +62,31 @@ export default function PageConocenos() {
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white p-8 rounded-xl space-y-4">
-              <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
-                <Leaf className="w-6 h-6 text-green-600" />
+              <div className="w-12 h-12 bg-secondary/30 rounded-full flex items-center justify-center">
+                <Leaf className="w-6 h-6 text-primary" />
               </div>
               <h3 className="text-xl font-semibold">Sostenibilidad</h3>
-              <p className="text-muted-foreground">
+              <p className="text-primary">
                 Comprometidos con prácticas sostenibles y el cuidado del medio
                 ambiente en todos nuestros procesos.
               </p>
             </div>
             <div className="bg-white p-8 rounded-xl space-y-4">
-              <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
-                <Award className="w-6 h-6 text-green-600" />
+              <div className="w-12 h-12 bg-secondary/30 rounded-full flex items-center justify-center">
+                <Award className="w-6 h-6 text-primary" />
               </div>
               <h3 className="text-xl font-semibold">Calidad</h3>
-              <p className="text-muted-foreground">
+              <p className="text-primary">
                 Productos de la más alta calidad, cumpliendo con todos los
                 estándares nacionales e internacionales.
               </p>
             </div>
             <div className="bg-white p-8 rounded-xl space-y-4">
-              <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
-                <Users className="w-6 h-6 text-green-600" />
+              <div className="w-12 h-12 bg-secondary/30 rounded-full flex items-center justify-center">
+                <Users className="w-6 h-6 text-primary" />
               </div>
               <h3 className="text-xl font-semibold">Comunidad</h3>
-              <p className="text-muted-foreground">
+              <p className="text-primary">
                 Generando empleo y desarrollo en nuestra comunidad,
                 contribuyendo al crecimiento de la región.
               </p>

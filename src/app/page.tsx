@@ -226,12 +226,12 @@ export default function page() {
         <div className="flex relative z-10 flex-col items-center gap-5 justify-center">
           <div>
             <h2 className="text-3xl font-bold md:text-4xl text-center">
-              Aprender con nosotros
+              Aprende con nosotros
             </h2>
             <p className="text-center">Conoce todas la recetas de Doña Leche</p>
           </div>
           <Button size="lg" className="w-fit rounded-full">
-            Ver Resetas
+            Ver Recetas
           </Button>
         </div>
         <div className="flex relative z-10 items-center justify-center">

@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Header } from "@/components/header";
 import { Montserrat } from "next/font/google";
+import { Footer } from "@/components/footer";
 
 export const metadata: Metadata = {
   title: "Doña Leche",
@@ -45,6 +46,7 @@ export default function RootLayout({
         </div>
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );

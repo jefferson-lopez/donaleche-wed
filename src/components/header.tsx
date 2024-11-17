@@ -120,7 +120,7 @@ export function NavigationMenuDemo() {
 
 export function Header() {
   return (
-    <header className="md:h-[174px]">
+    <header className="md:h-[174px] relative z-50">
       <div className="relative h-10 bg-secondary flex items-center justify-center">
         <Button variant="link">
           <MapPin className="w-4 h-4" />

@@ -45,42 +45,44 @@ const components: { title: string; href: string; description: string }[] = [
 export function NavigationMenuDemo() {
   return (
     <div>
-      <Button variant="ghost">Inicio</Button>
+      <Button asChild variant="ghost">
+        <Link href={"/"}>Inicio</Link>
+      </Button>
       <HoverCard openDelay={0} closeDelay={0}>
         <HoverCardTrigger asChild>
           <Button variant="ghost">Categorias</Button>
         </HoverCardTrigger>
         <HoverCardContent className="md:w-[400px] lg:w-[500px]">
           <ul className="grid gap-3 grid-cols-3 p-4">
-            <ListItem href="/docs" title="Avena">
+            <ListItem href="" title="Avena">
               <img
                 className="bg-transparent w-[100px] h-[100px] object-cover"
                 src={`${donaleche_collection_avena[0].image_url_1}`}
                 alt="Avena"
               />
             </ListItem>
-            <ListItem href="/docs" title="Kumis">
+            <ListItem href="" title="Kumis">
               <img
                 className="bg-transparent w-[100px] h-[100px] object-cover"
                 src={`${donaleche_collection_kumis[0].image_url_1}`}
                 alt="Avena"
               />
             </ListItem>
-            <ListItem href="/docs" title="Leches">
+            <ListItem href="" title="Leches">
               <img
                 className="bg-transparent w-[100px] h-[100px] object-cover"
                 src={`${donaleche_collection_leches[0].image_url_1}`}
                 alt="Avena"
               />
             </ListItem>
-            <ListItem href="/docs/installation" title="Quesos">
+            <ListItem href="" title="Quesos">
               <img
                 className="bg-transparent w-[100px] h-[100px] object-cover"
                 src={`${donaleche_collection_quesos[11].image_url_1}`}
                 alt="Avena"
               />
             </ListItem>
-            <ListItem href="/docs/primitives/typography" title="Yogurt">
+            <ListItem href="" title="Yogurt">
               <img
                 className="bg-transparent w-[100px] h-[100px] object-cover"
                 src={`${donaleche_collection_yogurt[0].image_url_1}`}
@@ -108,8 +110,10 @@ export function NavigationMenuDemo() {
           </ul>
         </HoverCardContent>
       </HoverCard>
-      <Button variant="ghost">Atencion al cliente</Button>
-      <Button variant="ghost">Conocenos</Button>
+      <Button variant="ghost">Atención al cliente</Button>
+      <Button asChild variant="ghost">
+        <Link href={"/conocenos"}>Conócenos</Link>
+      </Button>
     </div>
   );
 }
